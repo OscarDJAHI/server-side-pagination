@@ -1,0 +1,11 @@
+<app-hello name="{{ name }}"></app-hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<ul>
+  <li *ngFor="let item of collection.data | paginate: { itemsPerPage: itemsPerPage , currentPage: p, totalItems: totalItems }">
+    {{item.name}}
+  </li>
+</ul>
+
+<pagination-controls (pageChange)="getPage(p = $event)"></pagination-controls>
